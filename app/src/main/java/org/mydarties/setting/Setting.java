@@ -13,7 +13,7 @@ import org.mydarties.dir.drawer_dir.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettingDir extends BaseActivity {
+public class Setting extends BaseActivity {
 
     ListView list_setting;
     String[] prenoms = new String[]{
@@ -28,7 +28,7 @@ public class SettingDir extends BaseActivity {
         list_setting = (ListView)findViewById(R.id.list_setting);
         List<Setting_item> settings = genererSetting();
 
-        SettingAdapter adapter = new SettingAdapter(SettingDir.this, settings);
+        SettingAdapter adapter = new SettingAdapter(Setting.this, settings);
         list_setting.setAdapter(adapter);
 
 
@@ -41,7 +41,7 @@ public class SettingDir extends BaseActivity {
 
                 if(item.getLabel().equals("Modifier le mot de passe")){
                     Toast.makeText(getBaseContext(), item.getLabel(), Toast.LENGTH_LONG).show();
-                    Intent intent_new_password = new Intent(SettingDir.this, SettingDirNewPasswd.class);
+                    Intent intent_new_password = new Intent(Setting.this, SettingDirNewPasswd.class);
                     startActivity(intent_new_password);
                 }else{
                     Toast.makeText(getBaseContext(), "Fail", Toast.LENGTH_LONG).show();

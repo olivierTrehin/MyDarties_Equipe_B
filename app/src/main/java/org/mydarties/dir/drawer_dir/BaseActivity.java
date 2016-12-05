@@ -19,7 +19,7 @@ import org.mydarties.R;
 import org.mydarties.dir.HomeDir;
 import org.mydarties.dir.ResultDir;
 import org.mydarties.dir.SaisirDir;
-import org.mydarties.setting.SettingDir;
+import org.mydarties.setting.Setting;
 
 import java.util.ArrayList;
 
@@ -236,7 +236,7 @@ public class BaseActivity extends ActionBarActivity {
                 startActivity(new Intent(this, SaisirDir.class));
                 break;
             case 3:
-                startActivity(new Intent(this, SettingDir.class));
+                startActivity(new Intent(this, Setting.class));
                 break;
             case 4:
                 SharedPreferences.Editor editor = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();

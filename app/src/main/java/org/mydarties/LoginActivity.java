@@ -32,7 +32,7 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.mydarties.dir.HomeDir;
-import org.mydarties.resp.MainActivityResp;
+import org.mydarties.resp.HomeResp;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -442,7 +442,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                     }else if(typeProfil == 1){
                         System.out.println("Responsable region");
-                        Intent intent_resp = new Intent(LoginActivity.this, MainActivityResp.class);
+                        Intent intent_resp = new Intent(LoginActivity.this, HomeResp.class);
                         startActivity(intent_resp);
 
 

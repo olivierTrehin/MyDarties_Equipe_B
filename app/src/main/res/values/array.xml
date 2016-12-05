@@ -17,4 +17,18 @@
         <item>Déconnexion</item>
     </string-array>
 
+    <string-array name="nav_icon_resp">
+        <item>@drawable/ic_home_white_24dp</item>
+        <item>@drawable/ic_grid_on_white_24dp</item>
+        <item>@drawable/ic_settings_white_24dp</item>
+        <item>@drawable/ic_exit_to_app_white_24dp</item>
+    </string-array>
+
+    <string-array name="nav_title_resp">
+        <item>Home</item>
+        <item>Consulter</item>
+        <item>Paramètres</item>
+        <item>Déconnexion</item>
+    </string-array>
+
 </resources>

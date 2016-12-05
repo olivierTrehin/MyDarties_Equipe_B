@@ -1,13 +1,13 @@
-package org.mydarties.dir;
+package org.mydarties.resp;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import org.mydarties.R;
-import org.mydarties.dir.drawer_dir.BaseActivity;
+import org.mydarties.resp.drawer_resp.BaseActivity;
 
-public class HomeDir extends BaseActivity {
+public class HomeResp extends BaseActivity {
 
     private TextView NomDirView, PrenomDirView, MailDirView, ProfilDirView, DateMajDirView;
 
@@ -15,7 +15,7 @@ public class HomeDir extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         onCreateDrawer(R.layout.activity_main_home);
-        //------------------------------------------------------------------------------------------
+
         SharedPreferences prefs = getSharedPreferences("PREFERENCES", MODE_PRIVATE);
         String NOM = prefs.getString("name", "Error somewhere");//"No name defined" is the default value.
         String PRENOM = prefs.getString("surname", "Error somewhere");
@@ -38,8 +38,6 @@ public class HomeDir extends BaseActivity {
         DateMajDirView = (TextView)findViewById(R.id.DateHome);
         DateMajDirView.setText(DATEMAJ);
         //------------------------------------------------------------------------------------------
-
-
 
     }
 }

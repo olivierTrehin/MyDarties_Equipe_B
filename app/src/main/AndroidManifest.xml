@@ -27,7 +27,7 @@
             android:name=".dir.HomeDir"
             android:label="MyDarties - Dir Magasin" />
         <activity
-            android:name=".resp.MainActivityResp"
+            android:name=".resp.HomeResp"
             android:label="MyDarties - Resp Région" />
         <activity
             android:name=".dir.ResultDir"
@@ -36,7 +36,7 @@
             android:name=".dir.SaisirDir"
             android:label="MyDarties - Saisie" />
         <activity
-            android:name=".setting.SettingDir"
+            android:name=".setting.Setting"
             android:label="MyDarties - Setting" />
         <activity android:name=".setting.SettingDirNewPasswd"></activity>
     </application>

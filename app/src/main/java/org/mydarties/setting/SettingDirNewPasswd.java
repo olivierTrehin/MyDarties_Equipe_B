@@ -26,7 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.mydarties.R;
 import org.mydarties.dir.drawer_dir.BaseActivity;
-import org.mydarties.resp.MainActivityResp;
+import org.mydarties.resp.HomeResp;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -374,15 +374,14 @@ public class SettingDirNewPasswd extends BaseActivity implements LoaderManager.L
                 if(typeProfil == 2){
                     Toast.makeText(getBaseContext(), "Mot de passe modifié avec succès!", Toast.LENGTH_SHORT).show();
                     System.out.println("Directeur magasin");
-                    Intent intent_dir = new Intent(SettingDirNewPasswd.this, SettingDir.class);
+                    Intent intent_dir = new Intent(SettingDirNewPasswd.this, Setting.class);
                     startActivity(intent_dir);
 
                 }else if(typeProfil == 1){
-
-                    Intent intent_resp = new Intent(SettingDirNewPasswd.this, MainActivityResp.class);
-                    intent_resp.putExtra("user_info", this.result_string);
-                    startActivity(intent_resp);
+                    Toast.makeText(getBaseContext(), "Mot de passe modifié avec succès!", Toast.LENGTH_SHORT).show();
                     System.out.println("Responsable region");
+                    Intent intent_resp = new Intent(SettingDirNewPasswd.this, HomeResp.class);
+                    startActivity(intent_resp);
 
                 }else{
                     mPasswordView1.setError(getString(R.string.error_invalid_profil));
