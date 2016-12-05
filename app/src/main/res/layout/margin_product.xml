@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <TableRow
+        android:id="@+id/EnTete"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/nameProduit" android:text=""
+            android:layout_weight="1" android:background="#dcdcdc"
+            android:textColor="#000000"
+            android:padding="20dip" android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/marginObj" android:text=""
+            android:layout_weight="1" android:background="#dcdcdc"
+            android:textColor="#000000"
+            android:padding="20dip" android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/marginReal" android:text=""
+            android:layout_weight="1" android:background="#dcdcdc"
+            android:textColor="#000000"
+            android:padding="20dip" android:gravity="center"/>
+
+    </TableRow>
+</RelativeLayout>

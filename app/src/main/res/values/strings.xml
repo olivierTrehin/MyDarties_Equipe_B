@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">DARTIES</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="prompt_ancient_password">Ancien mot de passe</string>
+    <string name="prompt_confirmation_1">Nouveau mot de passe</string>
+    <string name="prompt_confirmation_2">Confirmation</string>
+    <string name="action_update_password">Envoyer</string>
+    <string name="action_sign_in_short">Connection</string>
+    <string name="error_invalid_email">Email invalide</string>
+    <string name="error_invalid_password">Mot de passe trop court</string>
+    <string name="error_correspond_ancient_password">Mot de passe actuel invalide</string>
+    <string name="error_correspond_password">Mot de passe actuel invalide</string>
+    <string name="error_invalid_profil">Mauvais profil : accès refusé</string>
+    <string name="error_incorrect_password">Mot de passe invalide</string>
+    <string name="error_field_required">Champs requis</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="open_drawer">Menu</string>
+    <string name="close_drawer">MyDarties - Dir Magasin</string>
+
+    <!-- Localhost : http://http://192.168.1.20/LPS2IMa/site/private_html/index.php/connection -->
+    <!-- Raspberry : http://172.24.1.1/darties1/private_html/index.php/connection -->
+    <string name="url_connexion">http://172.24.1.1/darties1/private_html/index.php/connection</string>
+
+    <!-- Localhost : http://192.168.1.20/LPS2IMa/site/private_html/index.php/update -->
+    <!-- Raspberry : http://172.24.1.1/darties1/private_html/index.php/update -->
+    <string name="url_updatepassword">http://172.24.1.1/darties1/private_html/index.php/update</string>
+
+
+</resources>

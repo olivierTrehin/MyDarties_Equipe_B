@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nav_icon_dir">
+        <item>@drawable/ic_home_white_24dp</item>
+        <item>@drawable/ic_grid_on_white_24dp</item>
+        <item>@drawable/ic_add_circle_white_24dp</item>
+        <item>@drawable/ic_settings_white_24dp</item>
+        <item>@drawable/ic_exit_to_app_white_24dp</item>
+    </string-array>
+
+    <string-array name="nav_title_dir">
+        <item>Home</item>
+        <item>Résutat</item>
+        <item>Saisir</item>
+        <item>Paramètres</item>
+        <item>Déconnexion</item>
+    </string-array>
+
+</resources>
