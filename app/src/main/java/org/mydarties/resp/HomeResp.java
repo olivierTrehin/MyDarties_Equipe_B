@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import org.mydarties.R;
-import org.mydarties.resp.drawer_resp.BaseActivity;
+import org.mydarties.drawer.BaseActivity;
 
 public class HomeResp extends BaseActivity {
 
