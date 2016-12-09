@@ -1,4 +1,4 @@
-package org.mydarties.dir.drawer_dir;
+package org.mydarties.drawer;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,6 +19,8 @@ import org.mydarties.R;
 import org.mydarties.dir.HomeDir;
 import org.mydarties.dir.ResultDir;
 import org.mydarties.dir.SaisirDir;
+import org.mydarties.resp.Consult_form;
+import org.mydarties.resp.HomeResp;
 import org.mydarties.setting.Setting;
 
 import java.util.ArrayList;
@@ -106,16 +108,31 @@ public class BaseActivity extends ActionBarActivity {
         frameLayout = (FrameLayout)findViewById(R.id.content_frame);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        SharedPreferences prefs = getSharedPreferences("PREFERENCES", MODE_PRIVATE);
+        int TYPE_PROFIL = prefs.getInt("type_profil", 0);
+        if(TYPE_PROFIL == 1){
+            navMenuTitle = getResources().getStringArray(R.array.nav_title_resp);
+            navMenuIcon = getResources().obtainTypedArray(R.array.nav_icon_resp);
+            navDrawerItems = new ArrayList<NavDrawerItem>();
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[0], navMenuIcon.getResourceId(0,-1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[1], navMenuIcon.getResourceId(1, -1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[2], navMenuIcon.getResourceId(2,-1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[3], navMenuIcon.getResourceId(3,-1)));
+        }else if(TYPE_PROFIL == 2) {
+            navMenuTitle = getResources().getStringArray(R.array.nav_title_dir);
+            navMenuIcon = getResources().obtainTypedArray(R.array.nav_icon_dir);
 
-        navMenuTitle = getResources().getStringArray(R.array.nav_title_dir);
-        navMenuIcon = getResources().obtainTypedArray(R.array.nav_icon_dir);
-        navDrawerItems = new ArrayList<NavDrawerItem>();
+            navDrawerItems = new ArrayList<NavDrawerItem>();
 
-        navDrawerItems.add(new NavDrawerItem(navMenuTitle[0], navMenuIcon.getResourceId(0,-1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitle[1], navMenuIcon.getResourceId(1, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitle[2], navMenuIcon.getResourceId(2,-1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitle[3], navMenuIcon.getResourceId(3,-1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitle[4], navMenuIcon.getResourceId(4,-1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[0], navMenuIcon.getResourceId(0,-1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[1], navMenuIcon.getResourceId(1, -1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[2], navMenuIcon.getResourceId(2,-1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[3], navMenuIcon.getResourceId(3,-1)));
+            navDrawerItems.add(new NavDrawerItem(navMenuTitle[4], navMenuIcon.getResourceId(4,-1)));
+        }
+
+
+
         // set a custom shadow that overlays the main content when the drawer opens
         navMenuIcon.recycle();
 
@@ -224,33 +241,61 @@ public class BaseActivity extends ActionBarActivity {
         setTitle(navMenuTitle[position]);
         mDrawerLayout.closeDrawer(mDrawerList);
         BaseActivity.position = position; //Setting currently selected position in this field so that it will be available in our child activities.
+        SharedPreferences prefs = getSharedPreferences("PREFERENCES", MODE_PRIVATE);
+        int TYPE_PROFIL = prefs.getInt("type_profil", 0);
+        if(TYPE_PROFIL == 1){
+            switch (position) {
+                case 0:
+                    startActivity(new Intent(this, HomeResp.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(this, Consult_form.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(this, Setting.class));
+                    break;
+                case 3:
+                    SharedPreferences.Editor editor = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();
+                    editor.clear();
+                    editor.commit();
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                    BaseActivity.position = 0;
+                    break;
 
-        switch (position) {
-            case 0:
-                startActivity(new Intent(this, HomeDir.class));
-                break;
-            case 1:
-                startActivity(new Intent(this, ResultDir.class));
-                break;
-            case 2:
-                startActivity(new Intent(this, SaisirDir.class));
-                break;
-            case 3:
-                startActivity(new Intent(this, Setting.class));
-                break;
-            case 4:
-                SharedPreferences.Editor editor = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();
-                editor.clear();
-                editor.commit();
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
-                BaseActivity.position = 0;
-                break;
+                default:
+                    break;
+            }
+        }else if(TYPE_PROFIL == 2) {
+            switch (position) {
+                case 0:
+                    startActivity(new Intent(this, HomeDir.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(this, ResultDir.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(this, SaisirDir.class));
+                    break;
+                case 3:
+                    startActivity(new Intent(this, Setting.class));
+                    break;
+                case 4:
+                    SharedPreferences.Editor editor = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();
+                    editor.clear();
+                    editor.commit();
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                    BaseActivity.position = 0;
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
 
     }

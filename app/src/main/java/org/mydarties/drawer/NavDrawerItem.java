@@ -1,4 +1,4 @@
-package org.mydarties.dir.drawer_dir;
+package org.mydarties.drawer;
 
 /**
  * Created by Guyader Vincent on 02/12/2016.

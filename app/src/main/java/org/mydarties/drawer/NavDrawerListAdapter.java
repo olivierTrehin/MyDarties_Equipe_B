@@ -1,4 +1,4 @@
-package org.mydarties.dir.drawer_dir;
+package org.mydarties.drawer;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
