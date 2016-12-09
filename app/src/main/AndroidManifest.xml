@@ -39,6 +39,10 @@
             android:name=".setting.Setting"
             android:label="MyDarties - Setting" />
         <activity android:name=".setting.SettingDirNewPasswd"></activity>
+        <activity
+            android:name=".resp.Consult_form"
+            android:label="MyDarties - Consulter"/>
+
     </application>
 
 </manifest>
