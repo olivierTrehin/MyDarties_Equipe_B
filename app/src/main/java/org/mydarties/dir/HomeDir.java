@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import org.mydarties.R;
-import org.mydarties.dir.drawer_dir.BaseActivity;
+import org.mydarties.drawer.BaseActivity;
 
 public class HomeDir extends BaseActivity {
 

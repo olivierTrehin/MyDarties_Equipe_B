@@ -9,7 +9,7 @@ import org.mydarties.resultat.MarginProductAdapter;
 import org.mydarties.resultat.Product;
 import org.mydarties.resultat.SalesProductAdapter;
 import org.mydarties.resultat.TurnoverProductAdapter;
-import org.mydarties.dir.drawer_dir.BaseActivity;
+import org.mydarties.drawer.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;

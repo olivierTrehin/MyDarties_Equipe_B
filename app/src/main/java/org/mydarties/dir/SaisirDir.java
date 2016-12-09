@@ -2,7 +2,7 @@ package org.mydarties.dir;
 
 import android.os.Bundle;
 import org.mydarties.R;
-import org.mydarties.dir.drawer_dir.BaseActivity;
+import org.mydarties.drawer.BaseActivity;
 
 public class SaisirDir extends BaseActivity {
 
