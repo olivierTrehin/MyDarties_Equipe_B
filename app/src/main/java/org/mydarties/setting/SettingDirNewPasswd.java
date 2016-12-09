@@ -25,7 +25,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.mydarties.R;
-import org.mydarties.dir.drawer_dir.BaseActivity;
+import org.mydarties.drawer.BaseActivity;
 import org.mydarties.resp.HomeResp;
 
 import java.io.BufferedReader;

@@ -8,7 +8,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import org.mydarties.R;
-import org.mydarties.dir.drawer_dir.BaseActivity;
+import org.mydarties.drawer.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
