@@ -258,6 +258,9 @@ public class BaseActivity extends ActionBarActivity {
                     SharedPreferences.Editor editor = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();
                     editor.clear();
                     editor.commit();
+                    SharedPreferences.Editor tableau = getSharedPreferences("TABLEAU", MODE_PRIVATE).edit();
+                    tableau.clear();
+                    tableau.commit();
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
@@ -283,9 +286,12 @@ public class BaseActivity extends ActionBarActivity {
                     startActivity(new Intent(this, Setting.class));
                     break;
                 case 4:
-                    SharedPreferences.Editor editor = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();
-                    editor.clear();
-                    editor.commit();
+                    SharedPreferences.Editor preferences = getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit();
+                    preferences.clear();
+                    preferences.commit();
+                    SharedPreferences.Editor tableau = getSharedPreferences("TABLEAU", MODE_PRIVATE).edit();
+                    tableau.clear();
+                    tableau.commit();
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
