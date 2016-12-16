@@ -392,7 +392,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                     this.result_string = String.valueOf(result);
                     System.out.println("Result = " + result);
-                     JSONObject user = new JSONObject(String.valueOf(result));
+                    JSONObject user = new JSONObject(String.valueOf(result));
 
                     succes = user.getBoolean("success");
 
