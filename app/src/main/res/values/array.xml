@@ -31,4 +31,67 @@
         <item>Déconnexion</item>
     </string-array>
 
+    <string-array name="Nord_Ouest">
+        <item>Alencon</item>
+        <item>Amiens</item>
+        <item>Angers</item>
+        <item>Nantes</item>
+        <item>Quimper</item>
+        <item>Rouen</item>
+        <item>Saint-Brieuc</item>
+        <item>Tours</item>
+    </string-array>
+
+    <string-array name="Nord_Est">
+        <item>Arras</item>
+        <item>Besancon</item>
+        <item>Dijon</item>
+        <item>Lille</item>
+        <item>Metz</item>
+        <item>Nancy</item>
+        <item>Strasbourg</item>
+        <item>Troyes</item>
+        <item>Valenciennes</item>
+    </string-array>
+
+    <string-array name="Sud_Ouest">
+        <item>Angouleme</item>
+        <item>Bordeaux</item>
+        <item>Carcassonne</item>
+        <item>Foix</item>
+        <item>Limoges</item>
+        <item>Pau</item>
+        <item>Perigueux</item>
+        <item>Rodez</item>
+        <item>Tarbes</item>
+        <item>Toulon</item>
+    </string-array>
+
+    <string-array name="Sud_Est">
+        <item>Bastia</item>
+        <item>Bourges</item>
+        <item>Chambery</item>
+        <item>Clermont-Ferrand</item>
+        <item>Digne</item>
+        <item>Grenoble</item>
+        <item>Lyon</item>
+        <item>Marseille</item>
+        <item>Nice</item>
+        <item>Nimes</item>
+        <item>Saint-Etienne</item>
+        <item>Valence</item>
+    </string-array>
+
+    <string-array name="Région_parisienne">
+        <item>Bobigny</item>
+        <item>Cergy</item>
+        <item>Creteil</item>
+        <item>Evry</item>
+        <item>Melun</item>
+        <item>Nanterre</item>
+        <item>Paris-Sud</item>
+        <item>Paris-Nord</item>
+        <item>Bonnetable</item>
+    </string-array>
+
 </resources>
