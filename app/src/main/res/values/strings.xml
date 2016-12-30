@@ -31,5 +31,6 @@
     <!-- Raspberry : http://172.24.1.1/darties1/private_html/index.php/update -->
     <string name="url_updatepassword">http://172.24.1.1/darties1/private_html/index.php/update</string>
 
+    <string name="url_getDirTableau">http://172.24.1.1/darties1/private_html/index.php/getTableauAcceuilDM</string>
 
 </resources>
