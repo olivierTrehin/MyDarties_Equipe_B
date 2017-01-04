@@ -1,10 +1,12 @@
 package org.mydarties.resp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,12 +18,13 @@ import org.mydarties.drawer.BaseActivity;
  * Created by DartiesB on 09/12/2016.
  */
 
-public class Consult_form extends BaseActivity implements AdapterView.OnItemSelectedListener {
+public class ConsultForm extends BaseActivity implements AdapterView.OnItemSelectedListener {
 
     private TextView ProfilDirView;
     private Spinner SpinMag;
     private String[] Spin_item_ville;
     private String PROFIL;
+    private Button Search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,18 @@ public class Consult_form extends BaseActivity implements AdapterView.OnItemSele
 
         // attaching data adapter to spinner
         SpinMag.setAdapter(dataAdapter);
+
+        Search = (Button)findViewById(R.id.But_search_result_resp);
+
+        Search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ville = (String) SpinMag.getSelectedItem();
+                Intent SearchTown = new Intent(ConsultForm.this, ResultResp.class);
+                SearchTown.putExtra("ville", ville);
+                startActivity(SearchTown);
+            }
+        });
 
 
 
