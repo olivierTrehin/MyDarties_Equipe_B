@@ -19,7 +19,7 @@ import org.mydarties.R;
 import org.mydarties.dir.HomeDir;
 import org.mydarties.dir.ResultDir;
 import org.mydarties.dir.SaisirDir;
-import org.mydarties.resp.Consult_form;
+import org.mydarties.resp.ConsultForm;
 import org.mydarties.resp.HomeResp;
 import org.mydarties.setting.Setting;
 
@@ -249,7 +249,7 @@ public class BaseActivity extends ActionBarActivity {
                     startActivity(new Intent(this, HomeResp.class));
                     break;
                 case 1:
-                    startActivity(new Intent(this, Consult_form.class));
+                    startActivity(new Intent(this, ConsultForm.class));
                     break;
                 case 2:
                     startActivity(new Intent(this, Setting.class));
