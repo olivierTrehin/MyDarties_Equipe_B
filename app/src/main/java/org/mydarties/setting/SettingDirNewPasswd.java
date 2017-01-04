@@ -232,7 +232,7 @@ public class SettingDirNewPasswd extends BaseActivity implements LoaderManager.L
     }
 
     @Override
-    public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
+    public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
 
     }
 
@@ -240,6 +240,7 @@ public class SettingDirNewPasswd extends BaseActivity implements LoaderManager.L
     public void onLoaderReset(Loader<Cursor> loader) {
 
     }
+
 
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -251,8 +252,7 @@ public class SettingDirNewPasswd extends BaseActivity implements LoaderManager.L
     }
 
     /**
-     * Represents an asynchronous login/registration task used to authenticate
-     * the user.
+     * Represents an asynchronous update password task used
      */
     public class UserResetPasswordTask extends AsyncTask<Void, Void, Boolean> {
 
