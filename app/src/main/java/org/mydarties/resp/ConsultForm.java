@@ -86,29 +86,6 @@ public class ConsultForm extends BaseActivity implements LoaderManager.LoaderCal
 
     }
 
-
-    public String[] setArraySpinMag(){
-
-        if(PROFIL.equals("Directeur Nord_Ouest")) {
-
-            Spin_item_ville = getResources().getStringArray(R.array.Nord_Ouest);
-        }else if(PROFIL.equals("Directeur Nord_Est")){
-
-            Spin_item_ville = getResources().getStringArray(R.array.Nord_Est);
-        }else if(PROFIL.equals("Directeur Sud_Ouest")){
-
-            Spin_item_ville = getResources().getStringArray(R.array.Sud_Ouest);
-        }else if(PROFIL.equals("Directeur Sud_Est")){
-
-            Spin_item_ville = getResources().getStringArray(R.array.Sud_Est);
-        }else if(PROFIL.equals("Directeur Région_parisienne")){
-
-            Spin_item_ville = getResources().getStringArray(R.array.Région_parisienne);
-        };
-        System.out.println(Spin_item_ville);
-        return Spin_item_ville;
-    }
-
     public static String GET(String url){
         InputStream inputStream = null;
         String result = "";
