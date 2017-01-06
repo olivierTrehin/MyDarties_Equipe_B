@@ -25,6 +25,10 @@ public class Product {
         this.objMargin = objMargin;
     }
 
+    public Product(String name){
+        this.name = name;
+    }
+
 
     public String getName() {
         return this.name;
@@ -81,4 +85,6 @@ public class Product {
     public void setObjMargin(int objMargin) {
         this.objMargin = objMargin;
     }
+
+
 }
