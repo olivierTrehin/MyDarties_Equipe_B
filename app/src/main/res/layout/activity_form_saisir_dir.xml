@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_result_dir"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.mydarties.dir.SaisirDir">
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:layout_alignParentStart="true" />
+
+    <TabHost
+        android:id="@+id/tabHostEdit"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/buttonSendData">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <!-- //Chiffre d'affaire -->
+                <LinearLayout
+                    android:id="@+id/tab1Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:id="@+id/EnTete"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:id="@+id/turnColName" android:text="Produit"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/turnColObj" android:text="Objectif"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/turnColReal" android:text="Réel"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                    </TableRow>
+
+                    <ListView
+                        android:id="@+id/turnoverViewEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:id="@+id/EnTete2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:id="@+id/salesColName" android:text="Produit"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/salesColObj" android:text="Objectif"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/salesColReal" android:text="Réel"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                    </TableRow>
+
+                    <ListView
+                        android:id="@+id/salesViewEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:id="@+id/EnTete3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:id="@+id/marginColName" android:text="Produit"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/marginColObj" android:text="Objectif"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/marginColReal" android:text="Réel"
+                            android:layout_weight="1" android:background="#dcdcdc"
+                            android:textColor="#000000"
+                            android:padding="20dip" android:gravity="center"/>
+
+                    </TableRow>
+
+                    <ListView
+                        android:id="@+id/marginViewEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+    <Button
+        android:text="Envoyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSendData"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/buttonAddProduit"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <Button
+        android:text="Ajouter produit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAddProduit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
