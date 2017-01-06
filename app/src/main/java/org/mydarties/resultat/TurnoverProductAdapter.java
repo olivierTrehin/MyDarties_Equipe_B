@@ -25,7 +25,7 @@ public class TurnoverProductAdapter extends ArrayAdapter<Product>{
     public View getView(int position, View convertView, ViewGroup parent) {
 
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.turnover_product,parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_adapter_turnover_product_result,parent, false);
         }
 
         ProductViewHolder viewHolder = (ProductViewHolder) convertView.getTag();
