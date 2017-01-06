@@ -25,7 +25,7 @@ public class SalesProductAdapter extends ArrayAdapter<Product>{
     public View getView(int position, View convertView, ViewGroup parent) {
 
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.sales_product,parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_adapter_sales_product_result,parent, false);
         }
 
         SalesProductViewHolder viewHolder = (SalesProductViewHolder) convertView.getTag();
