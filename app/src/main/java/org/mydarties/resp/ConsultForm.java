@@ -86,7 +86,6 @@ public class ConsultForm extends BaseActivity implements LoaderManager.LoaderCal
 
     }
 
-
     public static String GET(String url){
         InputStream inputStream = null;
         String result = "";
