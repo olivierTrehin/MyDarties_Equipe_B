@@ -1,10 +1,15 @@
 package org.mydarties.resultat;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.Serializable;
+
 /**
  * Created by Olivier Tréhin on 29/11/2016.
  */
 
-public class Product {
+public class Product implements Serializable {
     private String name;
     private int realTurnover;
     private int objTurnover;
@@ -86,5 +91,20 @@ public class Product {
         this.objMargin = objMargin;
     }
 
+    public JSONObject getJSONObject() {
+        JSONObject obj = new JSONObject();
+        try {
+            obj.put("name", name);
+            obj.put("realTurnover", realTurnover);
+            obj.put("objTurnover", objTurnover);
+            obj.put("realSales", realSales);
+            obj.put("objSales", objSales);
+            obj.put("realMargin", realMargin);
+            obj.put("objMargin", objMargin);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return obj;
+    }
 
 }
