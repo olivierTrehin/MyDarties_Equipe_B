@@ -23,14 +23,12 @@
     <string name="open_drawer">Menu</string>
     <string name="close_drawer">MyDarties - Dir Magasin</string>
 
-    <!-- Localhost : http://http://192.168.1.20/LPS2IMa/site/private_html/index.php/connection -->
-    <!-- Raspberry : http://172.24.1.1/darties1/private_html/index.php/connection -->
     <string name="url_connexion">http://172.24.1.1/darties1/private_html/index.php/connection</string>
 
-    <!-- Localhost : http://192.168.1.20/LPS2IMa/site/private_html/index.php/update -->
-    <!-- Raspberry : http://172.24.1.1/darties1/private_html/index.php/update -->
     <string name="url_updatepassword">http://172.24.1.1/darties1/private_html/index.php/update</string>
 
     <string name="url_getDirTableau">http://172.24.1.1/darties1/private_html/index.php/getTableauAcceuilDM</string>
+
+    <string name="url_addVente">http://172.24.1.1/darties1/private_html/index.php/addSaisieVente</string>
 
 </resources>
