@@ -8,7 +8,7 @@
         <item>@drawable/ic_settings_white_24dp</item>
         <item>@drawable/ic_exit_to_app_white_24dp</item>
     </string-array>
-
+    
     <string-array name="nav_title_dir">
         <item>Home</item>
         <item>Résutat</item>
@@ -29,6 +29,12 @@
         <item>Consulter</item>
         <item>Paramètres</item>
         <item>Déconnexion</item>
+    </string-array>
+
+    <string-array name="item_categorie">
+        <item>Four</item>
+        <item>Hifi</item>
+        <item>Magnétoscope</item>
     </string-array>
 
 </resources>
