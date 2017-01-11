@@ -67,8 +67,10 @@ public class ConsultForm extends BaseActivity implements LoaderManager.LoaderCal
         ProfilDirView = (TextView)findViewById(R.id.ProfilHome);
         ProfilDirView.setText(PROFIL);
 
+        String[] separated = PROFIL.split(" ");
+
         showProgress(true);
-        String url = "http://172.24.1.1/darties1/private_html/index.php/getSpinnerVille";
+        String url = "http://172.24.1.1/darties1/private_html/index.php/getspinnerville?profil="+separated[1];
         System.out.println("@URL = " + url);
         new ConsultForm.HttpAsyncTask().execute(url);
 
@@ -137,7 +139,7 @@ public class ConsultForm extends BaseActivity implements LoaderManager.LoaderCal
         @Override
         protected void onPostExecute(String result) {
             showProgress(false);
-            System.out.println(response);
+            System.out.println("Response = " + response);
 
             SpinMag = (Spinner)findViewById(R.id.spinner_mag_resp);
             SpinMag.setOnItemSelectedListener(this);
