@@ -25,23 +25,39 @@
         </activity>
         <activity
             android:name=".dir.HomeDir"
-            android:label="MyDarties - Dir Magasin" />
+            android:label="MyDarties - Dir Magasin"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".resp.HomeResp"
-            android:label="MyDarties - Resp Région" />
+            android:label="MyDarties - Resp Région"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".dir.ResultDir"
-            android:label="MyDarties - Résultts" />
+            android:label="MyDarties - Résultts"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".dir.SaisirDir"
-            android:label="MyDarties - Saisie" />
+            android:label="MyDarties - Saisie"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".setting.Setting"
             android:label="MyDarties - Setting" />
-        <activity android:name=".setting.SettingDirNewPasswd"></activity>
         <activity
-            android:name=".resp.Consult_form"
-            android:label="MyDarties - Consulter"/>
+            android:name=".setting.SettingDirNewPasswd"
+            android:label="MyDarties - New Password"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".resp.ConsultForm"
+            android:label="MyDarties - Consulter"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".resp.ResultResp"
+            android:label="MyDarties - Resultat"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dir.SaisirProduct"
+            android:label="MyDarties - Saisie Product"
+            android:screenOrientation="portrait"/>
 
     </application>
 
