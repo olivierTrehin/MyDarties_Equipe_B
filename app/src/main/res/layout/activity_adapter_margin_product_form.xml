@@ -9,19 +9,19 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        <EditText
+        <TextView
             android:id="@+id/nameProduitEdit" android:text=""
             android:layout_weight="1"
             android:textColor="#000000" android:inputType="text"
             android:padding="20dip" android:gravity="center"/>
 
-        <EditText
+        <TextView
             android:id="@+id/marginObjEdit" android:text=""
             android:layout_weight="1"
             android:textColor="#000000" android:inputType="text"
             android:padding="20dip" android:gravity="center"/>
 
-        <EditText
+        <TextView
             android:id="@+id/marginRealEdit" android:text=""
             android:layout_weight="1"
             android:textColor="#000000" android:inputType="text"
