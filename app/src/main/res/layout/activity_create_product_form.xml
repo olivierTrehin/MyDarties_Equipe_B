@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="     " />
+
+    <TextView
+        android:text="Catégorie de produit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_intitule_nom_product"
+        android:layout_below="@+id/text_center"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_0_invisible"
+        android:layout_below="@+id/text_view_intitule_nom_product"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_nom_product"
+        android:layout_below="@+id/text_view_0_invisible"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_nom_product"
+        android:layout_alignParentStart="true"
+        android:id="@+id/text_view_invisible_1"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Marge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/intitule_margin"
+        android:layout_below="@+id/text_view_invisible_1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Objectif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:textAlignment="center"
+        android:layout_below="@+id/intitule_margin"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/text_center" />
+
+    <TextView
+        android:text="Reel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:textAlignment="center"
+        android:layout_below="@+id/intitule_margin"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/text_center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView10"
+        android:id="@+id/edit_number_marge_obj"
+        android:layout_alignEnd="@+id/textView10"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:id="@+id/edit_number_marge_real"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Ventes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_number_marge_obj"
+        android:layout_alignParentStart="true"
+        android:id="@+id/intitule_sales"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Objectif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intitule_sales"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView14"
+        android:layout_alignEnd="@+id/edit_number_marge_obj"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Reel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intitule_sales"
+        android:layout_alignStart="@+id/edit_number_marge_real"
+        android:id="@+id/textView15"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView14"
+        android:id="@+id/edit_number_vente_obj"
+        android:layout_alignEnd="@+id/textView14"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center"
+        android:layout_alignStart="@+id/edit_number_marge_obj" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:id="@+id/edit_number_vente_real"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center"
+        android:layout_alignEnd="@+id/edit_number_marge_real" />
+
+    <TextView
+        android:text="Chiffre d'affaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_number_vente_obj"
+        android:layout_alignParentStart="true"
+        android:id="@+id/intitule_turnover"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Objectif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView17"
+        android:layout_alignEnd="@+id/edit_number_vente_obj"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Reel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intitule_turnover"
+        android:layout_alignStart="@+id/edit_number_vente_real"
+        android:id="@+id/textView18"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView18"
+        android:id="@+id/edit_number_turnover_obj"
+        android:layout_alignEnd="@+id/textView17"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center"
+        android:layout_alignStart="@+id/edit_number_vente_obj" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:id="@+id/edit_number_turnover_real"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textAlignment="center"
+        android:layout_alignEnd="@+id/edit_number_vente_real" />
+
+    <Button
+        android:text="Ajouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_validate_add_product"
+        android:layout_marginTop="24dp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_below="@+id/edit_number_turnover_obj"
+        android:layout_alignEnd="@+id/edit_number_turnover_obj"
+        android:layout_alignStart="@+id/edit_number_turnover_obj" />
+
+    <Button
+        android:text="Annuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_validate_add_product"
+        android:layout_alignStart="@+id/edit_number_turnover_real"
+        android:id="@+id/button_validate_cancel_product"
+        android:layout_alignEnd="@+id/edit_number_turnover_real" />
+
+</RelativeLayout>
