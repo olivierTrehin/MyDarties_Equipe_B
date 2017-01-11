@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import org.mydarties.R;
 
@@ -16,24 +16,28 @@ import java.util.List;
  */
 
 public class TurnoverProductAdapter_form extends ArrayAdapter<Product>{
+    ProductViewHolder viewHolder;
+    boolean textChanged = false;
 
     public TurnoverProductAdapter_form(Context context, List<Product> products) {
         super(context, 0, products);
     }
 
+
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_adapter_turnover_product_form,parent, false);
         }
 
-        ProductViewHolder viewHolder = (ProductViewHolder) convertView.getTag();
+        this.viewHolder = (ProductViewHolder) convertView.getTag();
         if(viewHolder == null){
             viewHolder = new ProductViewHolder();
-            viewHolder.name = (EditText) convertView.findViewById(R.id.TextViewProduitEdit);
-            viewHolder.objTurn =(EditText) convertView.findViewById(R.id.TextViewProduitObjEdit);
-            viewHolder.realTurn = (EditText) convertView.findViewById(R.id.TextViewReelEdit);
+
+            viewHolder.name = (TextView) convertView.findViewById(R.id.TextViewProduitEdit);
+            viewHolder.objTurn =(TextView) convertView.findViewById(R.id.TextViewProduitObjEdit);
+            viewHolder.realTurn = (TextView) convertView.findViewById(R.id.TextViewReelEdit);
 
             convertView.setTag(viewHolder);
         }
@@ -43,12 +47,14 @@ public class TurnoverProductAdapter_form extends ArrayAdapter<Product>{
 
         //remplissage des vues
         viewHolder.name.setText(""+product.getName());
+        viewHolder.objTurn.setText(""+product.getObjTurnover());
+        viewHolder.realTurn.setText(""+product.getRealTurnover());
         return convertView;
     }
 
-    private class ProductViewHolder{
-        public EditText name;
-        public EditText realTurn;
-        public EditText objTurn;
+    public class ProductViewHolder{
+        public TextView name;
+        public TextView realTurn;
+        public TextView objTurn;
     }
 }
