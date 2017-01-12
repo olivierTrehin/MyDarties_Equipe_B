@@ -95,7 +95,7 @@ public class ResultDir extends BaseActivity implements LoaderManager.LoaderCallb
         if(!tableau.contains("accueil")) {
             System.out.println("Don't exist...");
             showProgress(true);
-            String url = "http://172.24.1.1/darties1/private_html/index.php/getTableauAcceuilDM?id=" + id + "&id_profil=" + id_profil + "&token=" + token;
+            String url = "http://172.24.1.1/darties1/private_html/index.php/getTableauAccueilDM?id=" + id + "&id_profil=" + id_profil + "&token=" + token;
             System.out.println("@URL = " + url);
             new HttpAsyncTask().execute(url);
 

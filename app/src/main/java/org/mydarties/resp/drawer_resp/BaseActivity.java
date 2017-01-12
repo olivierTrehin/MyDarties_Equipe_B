@@ -99,7 +99,7 @@ public class BaseActivity extends ActionBarActivity {
     @SuppressWarnings("ResourceType")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.navigation_drawer_base_layout);
+        setContentView(R.layout.activity_navigation_drawer_base_layout);
 
         frameLayout = (FrameLayout)findViewById(R.id.content_frame);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

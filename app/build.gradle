@@ -18,17 +18,43 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
+
+   /* packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/plexus/components.xml'
+        exclude 'licenses/javolution.license.TXT'
+        exclude 'org/apache/maven/project/pom-4.0.0.xml'
+        exclude 'org/cyberneko/html/res/HTMLlat1.properties'
+        exclude 'licenses/extreme.indiana.edu.license.TXT'
+        exclude 'org/cyberneko/html/res/ErrorMessages_ja.properties'
+        exclude 'licenses/thoughtworks.TXT'
+        exclude 'org/cyberneko/html/res/ErrorMessages_ja.txt'
+        exclude 'org/cyberneko/html/res/ErrorMessages.properties'
+        exclude 'org/codehaus/plexus/plexus-bootstrap.xml'
+        exclude 'org/cyberneko/html/res/HTMLspecial.properties'
+        exclude 'org/cyberneko/html/res/XMLbuiltin.properties'
+        exclude 'org/cyberneko/html/res/HTMLsymbol.properties'
+    }*/
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     testCompile 'junit:junit:4.12'
-
+    testCompile 'org.robolectric:robolectric:3.1.4'
+    /* testCompile 'org.robolectric:shadows-httpclient:3.1.4'
+        testCompile 'org.robolectric:shadows-support-v4:3.1.4'*/
 }
 
 
